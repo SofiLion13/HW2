@@ -11,7 +11,14 @@ int GetNumber(string message)
     return number;
 }
 int number = GetNumber("Введите трехзначное число: ");
+int amount = number.ToString().Length;
 
+if (amount < 3 || amount > 3)
+{
+    Console.WriteLine("Вы ввели не трехзначное число");
+}
+else
+{
 // 2. Оставить 2 цифру числа
 int GetTheSecondNumber(int number)
 {
@@ -21,3 +28,4 @@ int GetTheSecondNumber(int number)
 int result = GetTheSecondNumber(number);
 
 Console.WriteLine($"Было: {number} Стало: {result}");
+}
